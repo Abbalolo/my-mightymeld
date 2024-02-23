@@ -42,14 +42,14 @@ function Back({ className, flip }) {
   return (
     <div
       onClick={flip}
-      className="h-[70px] w-[70px] flex justify-center items-center p-2 bg-purple-300 rounded-md dark:bg-slate-600 transition-all duration-500 ease-in"
+      className="h-[65px] w-[65px] flex justify-center items-center  bg-purple-300 rounded-md dark:bg-slate-600 transition-all duration-500 ease-in"
     ></div>
   );
 }
 
 function Front({ className, children }) {
   return (
-    <div className="h-[70px] w-[70px] flex justify-center items-center p-2 bg-purple-600 rounded-md text-white transition-all duration-500 ease-out">
+    <div className="h-[65px] w-[65px] flex justify-center items-center  bg-purple-600 rounded-md text-white transition-all duration-500 ease-out">
       {children}
     </div>
   );
@@ -57,7 +57,7 @@ function Front({ className, children }) {
 
 function Matched({ className, children }) {
   return (
-    <div className="h-[70px] w-[70px] flex justify-center items-center p-2 text-purple-300 rounded-md dark:text-slate-500 transition-all duration-500 ease-in">
+    <div className="h-[65px] w-[65px] flex justify-center items-center p-2 text-purple-300 rounded-md dark:text-slate-500 transition-all duration-500 ease-in">
       {children}
     </div>
   );

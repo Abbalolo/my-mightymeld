@@ -20,7 +20,7 @@ export function StartScreen({ start }) {
   return (
     <>
       <div className="h-screen w-full flex flex-col justify-center items-center p-10 ">
-        <div className=" w-full  bg-pink-100 h-[340px] md:w-[50%] flex flex-col gap-5 justify-center items-center transition-all duration-500 ease-in">
+        <div className=" w-[320px] bg-pink-100 h-[320px] md:w-[340px] flex flex-col gap-5 justify-center items-center transition-all duration-500 ease-in">
           <h1 className="text-pink-500 font-semibold text-xl md:text-4xl ">
             Memory
           </h1>
