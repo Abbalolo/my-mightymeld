@@ -19,18 +19,17 @@ export const possibleTileContents = [
 export function StartScreen({ start }) {
   return (
     <>
-      <div className="h-screen w-full flex flex-col justify-center items-center p-10 ">
-        <div className=" w-[320px] bg-pink-100 h-[320px] md:w-[340px] flex flex-col gap-5 justify-center items-center transition-all duration-500 ease-in">
-          <h1 className="text-pink-500 font-semibold text-xl md:text-4xl ">
+      <div className=" h-screen w-full flex flex-col justify-center items-center p-10">
+        <div className="w-[320px] bg-pink-100 h-[320px] md:w-[340px] flex flex-col gap-5 justify-center items-center transition-all duration-500 ease-in rounded-md">
+          <h1 className="text-pink-500 font-semibold text-xl md:text-4xl text-center">
             Memory
           </h1>
           <p className="text-pink-600 text-sm">
-            Flip over tiles looking fot pairs
+            Flip over tiles looking for pairs
           </p>
-
           <button
             onClick={start}
-            className="text-white w-[100px] p-2 animate-zoomIn bg-gradient-to-b from-pink-500 to-pink-600 rounded-lg animate-pulse "
+            className="text-white w-[100px] p-1 bg-gradient-to-b from-pink-500 to-pink-600 rounded-lg animate-pulse   "
           >
             Play
           </button>
@@ -140,16 +139,16 @@ export function PlayScreen({ end }) {
         <div
           className={`h-screen w-full dark:bg-black ${
             theme === "dark" ? "dark-transition" : ""
-          } flex justify-center items-center flex-col gap-5 p-5 `}
+          } flex justify-center items-center  flex-col gap-5 p-5 `}
         >
           <div className="flex justify-center items-center gap-1">
-            <h3 className="text-purple-600 font-semibold">Tries</h3>
+            <h3 className="text-purple-600 font-semibold ">Tries</h3>
 
-            <span className="text-purple-600 bg-purple-300 font-semibold px-1 rounded-md dark:bg-slate-800">
+            <span className="text-purple-600 bg-purple-300 px-1 font-semibold px1 rounded-md dark:bg-slate-800">
               {tryCount}
             </span>
           </div>
-          <div className=" grid grid-cols-4 gap-3 rounded-md bg-purple-100 p-3 dark:bg-slate-800 transition-all duration-300 ease-in">
+          <div className="grid grid-cols-4 gap-3 rounded-md bg-purple-100 p-3 dark:bg-slate-800 transition-all duration-300 ease-in">
             {getTiles(16).map((tile, i) => (
               <Tile key={i} flip={() => flip(i)} {...tile} />
             ))}
