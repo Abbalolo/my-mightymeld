@@ -57,7 +57,7 @@ function Front({ className, children }) {
 
 function Matched({ className, children }) {
   return (
-    <div className="h-[65px] w-[65px] flex justify-center items-center p-1 bg-purple-600  text-white rounded-md dark:bg-slate-500 p-2 transition-all duration-500 ease-out">
+    <div className="h-[65px] w-[65px] flex justify-center items-center p-1 bg-purple-600  text-white rounded-md dark:bg-slate-500 transition-all duration-500 ease-out">
       {children}
     </div>
   );
