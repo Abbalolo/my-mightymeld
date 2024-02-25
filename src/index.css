@@ -2,48 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-.dark-transition {
-  transition: background-color 0.4s ease, color 0.4s ease;
+body{
+    transition: all .3s ease-in;
+    overflow: hidden;
 }
 
-input[type=checkbox]{
-  height: 0;
+.dark-transition{
+    transition: bacground-color 0.5s ease, color 0.5s ease;
+}
+.icon-con {
+  --rotation: 0;
+  transform: rotate(calc(var(--rotation) * 1deg))
+  
+}
+
+input[type=checkbox] {
+  height:0;
   width: 0;
-  visibility: hidden;
+  visibility:hidden;
+  
 }
 
 label {
   cursor: pointer;
-  text-indent: -9999px;
-  width: 60px;
-  height: 30px;
+  text-indent:-9999px;
+  width:50px;
+  height:30px;
   background: grey;
-  display: block;
-  border-radius: 100px;
-  position: relative;
-}
-
-label:after {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 20px;
-  height: 20px;
-  background: #fff;
+  display:block;
   border-radius: 90px;
   transition: 0.3s;
+  position: relative;
+  
+  
 }
-
+label:after {
+  content: '';
+  position:absolute;
+  top:5px;
+  left:25px;
+  width:20px;
+  height:20px;
+  background: #fff;
+  border-radius: 90px;
+    transition:0.3s;
+ }
 input:checked + label {
-  background: #8b5cf6;
+background: #8b5cf6
 }
-
 input:checked + label:after {
-  left: calc(100% - 5px);
-  transform: translateX(-100%);
+left: calc(100%-5px);
+transform: translateX(-100%)
 }
 
 label:active:after {
-  width: 30px;
+  width:30px;
 }
